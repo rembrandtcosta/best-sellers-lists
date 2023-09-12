@@ -13,10 +13,10 @@ export default function ToggleView(props: { books: Book[] }) {
   return (
     <div> 
       <div className="flex justify-end items-center"> 
-        <button onClick={() => setView('Grid')} className="m-2">
+        <button onClick={() => setView('Grid')} className={`${view === 'Grid' ? "bg-blue-500" : "bg-black"}  m-2`}>
           <FontAwesomeIcon icon={faGrip} size="xl" />
         </button>
-        <button onClick={() => setView('List')} className="m-2">
+        <button onClick={() => setView('List')} className={`${view === 'List' ? "bg-blue-500" : "bg-black"}  m-2`}> 
           <FontAwesomeIcon icon={faList} size="xl" />
         </button>
       </div>

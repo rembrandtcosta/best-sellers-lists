@@ -10,7 +10,7 @@ export default function BookCard(props: BookCardProps) {
 
   return (
     <div className={`${mode==='Grid' ? 'max-w-xs' : 'max-w-4xl'} rounded-lg overflow-hidden shadow-lg bg-white`}>
-      <Image src={book_image} alt={title} className="w-full h-48 object-cover object-center" />
+      <Image src={book_image} alt={title} width={200} height={200} className="w-full h-48 object-cover object-center" />
       <div className="px-6 py-4">
         <div className="text-black font-bold text-xl mb-2">{title}</div>
         <div className="text-gray-600 text-sm">{author}</div>
