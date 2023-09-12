@@ -6,7 +6,7 @@ export default function GridView(props: { books: Book[] }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-     {books.map((book) => (<BookCard mode='Grid' {...book} />))}
+     {books.map((book, index) => (<BookCard key={index} mode='Grid' {...book} />))}
     </div>
   );
 }

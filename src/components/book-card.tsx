@@ -1,4 +1,5 @@
 import Book from "@/models/book";
+import Image from "next/image";
 
 interface BookCardProps extends Book {
   mode: 'List' | 'Grid';
@@ -9,7 +10,7 @@ export default function BookCard(props: BookCardProps) {
 
   return (
     <div className={`${mode==='Grid' ? 'max-w-xs' : 'max-w-4xl'} rounded-lg overflow-hidden shadow-lg bg-white`}>
-      <img src={book_image} alt={title} className="w-full h-48 object-cover object-center" />
+      <Image src={book_image} alt={title} className="w-full h-48 object-cover object-center" />
       <div className="px-6 py-4">
         <div className="text-black font-bold text-xl mb-2">{title}</div>
         <div className="text-gray-600 text-sm">{author}</div>
